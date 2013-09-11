@@ -56,9 +56,16 @@
 <h2>
 <a name="some-comments" class="anchor" href="#some-comments"><span class="octicon octicon-link"></span></a>Some comments</h2>
 
-<p>The biggest trick this paper plays is the algorithm <code>Az</code>. Actually, understanding this <code>Az</code> well is quite important for getting through the whole work. The main idea behind <code>Az</code> is that we can saving z amount of latency cost if we adding one more acknowledgement some time earlier. Hence, it's trivial to show <code>A1</code> is 2-competitive. Same thing for the 'ski-rental' problem, if we buy the ski earlier, we should save z dollars. Whatever the traffic input is, it can hurt one <code>Az</code> for a particular z most. Thus, we can adopt the randomized algorithm to achieve a better result. I think it's better if the author can explain more intuition on the algorithm <code>Az</code>.</p>
+<p>The biggest trick this paper plays is the algorithm <code>Az</code>. Actually, understanding this <code>Az</code> well is quite important for getting through the whole work. The main idea behind <code>Az</code> is that we can saving z amount of latency cost if we adding one more acknowledgement some time earlier. Hence, it's trivial to show <code>A1</code> is 2-competitive. Same thing for the 'ski-rental' problem, if we buy the ski earlier, we should save z dollars. Whatever the traffic input is, it can hurt one <code>Az</code> for a particular z most. Thus, we can adopt the randomized algorithm to achieve a better result. I think it's better if the author can explain more about the intuition to the algorithm <code>Az</code>.</p>
 
 <p>The proof to bound the competitive ratio for each <code>Az</code> is also nontrivial, it's based on the comparison between the optimal online solution even though this solution is unknown. </p>
+
+<p>It's so beautiful a work for the author to explore the relationship between the TCP Acknowledgement issue and the well-known <code>ski-rental</code> problem. The construction of the basis input transforms the former to the latter magically.  </p>
+
+<h2>
+<a name="some-typos-" class="anchor" href="#some-typos-"><span class="octicon octicon-link"></span></a>Some typos ?</h2>
+
+<p>When I read this paper, I found 2 typos here (maybe I am understanding something wrong). The first one is <code>C(Az,Iu)</code> should be <code>(n-1)u+z+1</code> when u is no larger than z in Section 4.2. The second one is that <code>n_z(Iu)</code> should be 1 for the case <code>z &gt; u</code> in Equation 6. It turns out that these two typos do not impact the final result. </p>
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/hgm900611">hgm900611</a></p>
